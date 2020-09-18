@@ -48,7 +48,7 @@ TODO: > 1. TCP flow的localEndpoint，UDP flow的remoteEndpoint > 2. flow 的协
 
 2020-09-05
 
-通过http://192.168.43.137/test/checkin/checkin.php完成了信息提交和ip确定，应该考虑在日后的实现中定期上传信息，定期确认ip，但是如何调用函数，如何定期上传，如何确定系统全局ip变量仍待考虑。 packetTunnel似乎有每一个packet的协议。 利用completionHandler解决了http请求返回值的问题 完成向log中插入本机ip
+通过 http://140.207.159.105:8443 完成了信息提交和ip确定，应该考虑在日后的实现中定期上传信息，定期确认ip，但是如何调用函数，如何定期上传，如何确定系统全局ip变量仍待考虑。 packetTunnel似乎有每一个packet的协议。 利用completionHandler解决了http请求返回值的问题 完成向log中插入本机ip
 
 packetTunnel readPacketResult返回两个参数，packetData和packetProtocolNumber，通过packetProtocolNumber可以获取相应的协议，但是appProxy和packetTunnel具体是什么关系？Plus, readPacket是在Connection上进行的 在NWTCPConnection上提供远端地址和本地地址的获取。 TCP 本地ip地址也许还有点用，但是port地址似乎没什么用？但是还是完成了记录 iOS接口查询
 
